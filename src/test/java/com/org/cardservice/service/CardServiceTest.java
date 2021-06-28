@@ -6,9 +6,9 @@ import com.org.cardservice.exception.CardException;
 import com.org.cardservice.mapper.CardDataMapper;
 import com.org.cardservice.model.Card;
 import com.org.cardservice.repository.CardRepository;
+import com.org.cardservice.service.impl.CardServiceImpl;
 import com.org.cardservice.utility.MockObjectUtility;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -17,6 +17,8 @@ import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.event.annotation.BeforeTestClass;
+
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
@@ -36,10 +38,10 @@ public class CardServiceTest {
     private Iterable<Card> cardData;
 
     @InjectMocks
-    private CardService cardService;
+    private CardServiceImpl cardService;
 
 
-    @Before
+    @BeforeTestClass
     public void setUp() {
         MockitoAnnotations.initMocks(this);
     }

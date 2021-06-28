@@ -1,7 +1,7 @@
 package com.org.cardservice.controller;
 
 import com.org.cardservice.domain.CardDetailRequest;
-import com.org.cardservice.service.CardService;
+import com.org.cardservice.service.impl.CardServiceImpl;
 import com.org.cardservice.utility.MockObjectUtility;
 import org.junit.Assert;
 import org.junit.Test;
@@ -31,7 +31,7 @@ public class CardControllerTest {
     private MockMvc mockMvc;
 
     @MockBean
-    private CardService cardService;
+    private CardServiceImpl cardService;
 
 
 
