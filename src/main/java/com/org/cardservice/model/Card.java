@@ -2,10 +2,8 @@ package com.org.cardservice.model;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 
 @Entity
 @Getter @Setter

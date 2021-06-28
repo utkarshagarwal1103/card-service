@@ -28,7 +28,7 @@ public class ExceptionAdvice extends ResponseEntityExceptionHandler {
         body.put("timestamp", LocalDateTime.now());
         body.put("message", "Credit Card number not valid");
 
-        return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(body, HttpStatus.UNPROCESSABLE_ENTITY);
     }
 
     @Override
